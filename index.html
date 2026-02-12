@@ -2,156 +2,216 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zio Vallentino Gunawan | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <meta name="description" content="Portfolio of Zio Vallentino Gunawan - Informatics Engineering Student and Web Developer.">
-    <meta name="keywords" content="Zio Vallentino, Web Developer, Laravel Developer, Portfolio">
-    <meta name="author" content="Zio Vallentino Gunawan">
+    <meta name="description" content="Professional portfolio of Zio Vallentino Gunawan - Web Developer and Informatics Engineering Student">
 
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * { margin:0; padding:0; box-sizing:border-box; }
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            scroll-behavior:smooth;
+        }
+
         body {
             font-family:'Poppins', sans-serif;
-            background:#f8fafc;
-            color:#1e293b;
-        }
-
-        header {
-            text-align:center;
-            padding:80px 20px;
             background:#0f172a;
+            color:#e2e8f0;
+        }
+
+        nav {
+            display:flex;
+            justify-content:space-between;
+            padding:20px 80px;
+            position:fixed;
+            width:100%;
+            background:#0f172a;
+            z-index:1000;
+        }
+
+        nav a {
             color:white;
+            text-decoration:none;
+            margin-left:30px;
         }
 
-        header h1 {
-            font-size:42px;
-        }
-
-        header p {
-            margin-top:10px;
-            font-weight:300;
+        nav a:hover {
+            color:#38bdf8;
         }
 
         section {
-            padding:70px 20px;
-            max-width:1000px;
-            margin:auto;
+            padding:120px 80px;
+        }
+
+        .hero {
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            flex-wrap:wrap;
+            min-height:100vh;
+        }
+
+        .hero-text {
+            max-width:600px;
+        }
+
+        .hero h1 {
+            font-size:48px;
+        }
+
+        .hero span {
+            color:#38bdf8;
+        }
+
+        .hero p {
+            margin-top:20px;
+            color:#94a3b8;
+        }
+
+        .profile-img {
+            width:250px;
+            height:250px;
+            border-radius:50%;
+            object-fit:cover;
+            border:4px solid #38bdf8;
         }
 
         h2 {
-            margin-bottom:20px;
-            color:#0f172a;
+            font-size:32px;
+            margin-bottom:30px;
         }
 
         .card {
-            background:white;
+            background:#1e293b;
             padding:25px;
+            border-radius:10px;
             margin-bottom:20px;
-            border-radius:8px;
-            box-shadow:0 4px 12px rgba(0,0,0,0.08);
+            transition:0.3s;
         }
 
-        .tech span {
-            display:inline-block;
-            background:#e2e8f0;
-            padding:8px 14px;
-            margin:6px;
+        .card:hover {
+            transform:translateY(-5px);
+            background:#334155;
+        }
+
+        .skills .skill {
+            margin-bottom:15px;
+        }
+
+        .progress {
+            background:#334155;
             border-radius:20px;
-            font-size:14px;
+            overflow:hidden;
+        }
+
+        .progress-bar {
+            height:10px;
+            background:#38bdf8;
         }
 
         footer {
             text-align:center;
             padding:30px;
             background:#0f172a;
-            color:white;
-            margin-top:40px;
+            color:#64748b;
         }
 
-        a {
-            color:#2563eb;
-            text-decoration:none;
+        @media(max-width:768px){
+            nav { padding:20px 30px; }
+            section { padding:120px 30px; }
+            .hero { flex-direction:column; text-align:center; }
+            .profile-img { margin-top:30px; }
         }
 
-        a:hover {
-            text-decoration:underline;
-        }
-
-        .btn {
-            display:inline-block;
-            margin-top:15px;
-            padding:10px 20px;
-            background:#2563eb;
-            color:white;
-            border-radius:5px;
-        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Zio Vallentino Gunawan</h1>
-    <p>Informatics Engineering Student | Web Developer</p>
-</header>
+<nav>
+    <div><strong>Zio</strong></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-<section>
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Zio Vallentino Gunawan</span></h1>
+        <p>Informatics Engineering Student passionate about Web Development and System Architecture.</p>
+    </div>
+    <img src="profile.jpg" alt="Zio Profile" class="profile-img">
+</section>
+
+<section id="about">
     <h2>About Me</h2>
     <div class="card">
         <p>
-            I am an Informatics Engineering student with strong interest in web development and system architecture.
-            I am passionate about building structured, scalable, and performance-oriented digital solutions.
+            I am a dedicated Informatics Engineering student with strong analytical skills and industrial experience.
+            I focus on building efficient, scalable, and structured web applications.
         </p>
     </div>
 </section>
 
-<section>
+<section id="experience">
     <h2>Experience</h2>
     <div class="card">
         <h3>Process Engineer Intern</h3>
         <p><strong>PT PCI Elektronik International Batam</strong></p>
         <p>
-            Supervised production line for Cognex Hornbill and Parakeet products.
-            Ensured operational efficiency, reduced potential defects,
-            and maintained international quality standards.
+            Supervised production line for Cognex Hornbill & Parakeet products,
+            ensuring quality control, efficiency, and reduced defect rates.
         </p>
     </div>
 </section>
 
-<section>
+<section id="skills" class="skills">
     <h2>Technical Skills</h2>
-    <div class="card tech">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Laravel</span>
-        <span>Java</span>
-        <span>MySQL</span>
-        <span>Git & GitHub</span>
+
+    <div class="skill">
+        <p>HTML & CSS</p>
+        <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
     </div>
+
+    <div class="skill">
+        <p>Laravel</p>
+        <div class="progress"><div class="progress-bar" style="width:75%"></div></div>
+    </div>
+
+    <div class="skill">
+        <p>Java</p>
+        <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+    </div>
+
 </section>
 
-<section>
+<section id="projects">
     <h2>Projects</h2>
     <div class="card">
         <h3>Cashier Application</h3>
-        <p>Java-based cashier system with transaction and reporting features.</p>
+        <p>Java-based cashier system with transaction reporting features.</p>
     </div>
 
     <div class="card">
         <h3>Laravel Web Application</h3>
-        <p>CRUD-based web system built using Laravel framework and MVC architecture.</p>
+        <p>CRUD system built with MVC architecture.</p>
     </div>
 </section>
 
-<section>
+<section id="contact">
     <h2>Contact</h2>
     <div class="card">
         <p>Email: yourprofessional@email.com</p>
-        <p>GitHub: <a href="https://github.com/ziovallentinogunawan" target="_blank">github.com/ziovallentinogunawan</a></p>
+        <p>GitHub: github.com/ziovallentinogunawan</p>
     </div>
 </section>
 
